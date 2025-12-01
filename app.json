@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "2d105b51-c8ea-4f05-9f99-602a51ed552d"
+      }
+    },
+    "android": {
+      "package": "com.adl.adlgo"
+    },
+    "ios": {
+      "bundleIdentifier": "com.adl.adlgo",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}
