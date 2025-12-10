@@ -12,11 +12,18 @@ interface DeliveryState {
     packageType: string;
     description: string;
     packageValue: string;
+    packageWeight: string;
+    packageDescription: string;
     insuranceRequested: boolean;
+    offerPrice: string;
+    vehicleType: 'bike' | 'car' | 'van' | 'truck';
+    category: 'express' | 'standard' | 'same_day';
 
     setPickup: (location: Location) => void;
     setDropoff: (location: Location) => void;
     setPackageDetails: (type: string, description: string) => void;
+    setPackageWeight: (weight: string) => void;
+    setPackageDescription: (description: string) => void;
     setOfferPrice: (price: string) => void;
     setVehicleType: (type: 'bike' | 'car' | 'van' | 'truck') => void;
     setCategory: (category: 'express' | 'standard' | 'same_day') => void;
@@ -42,6 +49,8 @@ export const useDeliveryStore = create<DeliveryState>((set) => ({
     vehicleType: 'bike',
     category: 'standard',
     packageValue: '',
+    packageWeight: '',
+    packageDescription: '',
     insuranceRequested: false,
     consolidationItems: [],
     destinationCountry: '',
@@ -55,6 +64,8 @@ export const useDeliveryStore = create<DeliveryState>((set) => ({
     setVehicleType: (vehicleType) => set({ vehicleType }),
     setCategory: (category) => set({ category }),
     setPackageValue: (packageValue) => set({ packageValue }),
+    setPackageWeight: (packageWeight) => set({ packageWeight }),
+    setPackageDescription: (packageDescription) => set({ packageDescription }),
     setInsuranceRequested: (insuranceRequested) => set({ insuranceRequested }),
     setConsolidationItems: (consolidationItems) => set({ consolidationItems }),
     setDestinationCountry: (destinationCountry) => set({ destinationCountry }),
@@ -69,6 +80,8 @@ export const useDeliveryStore = create<DeliveryState>((set) => ({
         vehicleType: 'bike',
         category: 'standard',
         packageValue: '',
+        packageWeight: '',
+        packageDescription: '',
         insuranceRequested: false,
         consolidationItems: [],
         destinationCountry: '',

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
-import { colors, typography, spacing, borderRadius } from '../../theme/tokens';
+import { colors, typography, spacing, borderRadius, shadows } from '../../theme/tokens';
 import { useAuthStore } from '../../store/authStore';
 import { useWalletStore } from '../../store/walletStore';
 import { ServiceCard } from '../../components/molecules/ServiceCard';
@@ -93,6 +93,7 @@ export const CustomerHomeScreen = () => {
                     <ServiceCard
                         title="Interstate"
                         subtitle="Nationwide"
+                        icon={Truck}
                         onPress={() => navigation.navigate('InterstateShipping')}
                         color="#FF9800"
                         style={styles.gridItem}
@@ -123,21 +124,20 @@ export const CustomerHomeScreen = () => {
                         onPress={() => { }}
                     />
                 ))}
-            </View>
 
-            {/* Bill Payment Providers */}
-            <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Bill Payment Providers</Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.providerScroll}>
-                    {['MTN', 'Airtel', 'DSTV', 'GOTV', 'Ikeja'].map((provider, index) => (
-                        <TouchableOpacity key={index} style={styles.providerCard}>
-                            <Text style={styles.providerText}>{provider}</Text>
-                        </TouchableOpacity>
-                    ))}
-                </ScrollView>
-            </View>
-        </ScrollView>
-        </SafeAreaView >
+                {/* Bill Payment Providers */}
+                <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>Bill Payment Providers</Text>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.providerScroll}>
+                        {['MTN', 'Airtel', 'DSTV', 'GOTV', 'Ikeja'].map((provider, index) => (
+                            <TouchableOpacity key={index} style={styles.providerCard}>
+                                <Text style={styles.providerText}>{provider}</Text>
+                            </TouchableOpacity>
+                        ))}
+                    </ScrollView>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
 

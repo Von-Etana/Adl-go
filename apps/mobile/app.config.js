@@ -35,7 +35,14 @@ export default {
         ]
     },
     web: {
-        favicon: './assets/favicon.png'
+        favicon: './assets/favicon.png',
+        bundler: 'metro'
+    },
+    updates: {
+        url: 'https://u.expo.dev/272043ff-5973-4a75-8b3e-3e9a28600d49'
+    },
+    runtimeVersion: {
+        policy: 'appVersion'
     },
     extra: {
         eas: {

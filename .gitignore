@@ -29,3 +29,6 @@ yarn-error.log*
 
 # System Files
 Thumbs.db
+
+# Expo
+.expo

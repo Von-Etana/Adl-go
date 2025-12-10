@@ -4,12 +4,15 @@ export const colors = {
     gray: '#2D2D2D',
     orange: '#FF6B4A',
     coral: '#FF8566',
+    blue: '#2196F3',
+    green: '#4CAF50',
   },
   secondary: {
     white: '#FFFFFF',
     lightGray: '#F5F5F5',
     mediumGray: '#E0E0E0',
     textGray: '#757575',
+    gray: '#9E9E9E',
   },
   semantic: {
     success: '#4CAF50',
@@ -20,15 +23,16 @@ export const colors = {
 };
 
 export const typography = {
-  h1: { fontSize: 32, fontWeight: '700', lineHeight: 40 },
-  h2: { fontSize: 24, fontWeight: '600', lineHeight: 32 },
-  h3: { fontSize: 20, fontWeight: '600', lineHeight: 28 },
-  h4: { fontSize: 18, fontWeight: '600', lineHeight: 24 },
-  bodyLarge: { fontSize: 16, fontWeight: '400', lineHeight: 24 },
-  body: { fontSize: 14, fontWeight: '400', lineHeight: 20 },
-  bodySmall: { fontSize: 12, fontWeight: '400', lineHeight: 18 },
-  caption: { fontSize: 11, fontWeight: '400', lineHeight: 16 },
-  button: { fontSize: 16, fontWeight: '600', lineHeight: 24 },
+  h1: { fontSize: 32, fontWeight: '700' as const, lineHeight: 40 },
+  h2: { fontSize: 24, fontWeight: '600' as const, lineHeight: 32 },
+  h3: { fontSize: 20, fontWeight: '600' as const, lineHeight: 28 },
+  h4: { fontSize: 18, fontWeight: '600' as const, lineHeight: 24 },
+  bodyLarge: { fontSize: 16, fontWeight: '400' as const, lineHeight: 24 },
+  body: { fontSize: 14, fontWeight: '400' as const, lineHeight: 20 },
+  bodySmall: { fontSize: 12, fontWeight: '400' as const, lineHeight: 18 },
+  caption: { fontSize: 11, fontWeight: '400' as const, lineHeight: 16 },
+  captionSmall: { fontSize: 10, fontWeight: '400' as const, lineHeight: 14 },
+  button: { fontSize: 16, fontWeight: '600' as const, lineHeight: 24 },
 };
 
 export const spacing = {

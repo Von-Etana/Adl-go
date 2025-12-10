@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
     },
     historyName: {
         ...typography.body,
-        fontWeight: '600',
+        fontWeight: '600' as const,
         color: colors.primary.dark,
     },
     historyDate: {
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
     },
     historyStatus: {
         ...typography.caption,
-        fontWeight: '600',
+        fontWeight: '600' as const,
     },
     emptyState: {
         padding: spacing.xl,
